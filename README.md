@@ -22,25 +22,21 @@ Add `fsd-pathcheker` to the plugins section of your `.eslintrc` configuration fi
 
 ```json
 {
-    "plugins": [
-        "fsd-pathcheker"
-    ]
+  "plugins": ["fsd-pathcheker"]
 }
 ```
-
 
 Then configure the rules you want to use under the rules section.
 
 ```json
 {
-    "rules": {
-        "fsd-pathcheker/rule-name": 2
-    }
+  "rules": {
+    "fsd-pathcheker/path-checker": ["error", { "alias": "@" }],
+    "fsd-pathcheker/public-api-imports": ["error", { "alias": "@" }]
+  }
 }
 ```
 
 ## Supported Rules
 
-* Fill in provided rules here
-
-
+- Fill in provided rules here
