@@ -32,11 +32,20 @@ Then configure the rules you want to use under the rules section.
 {
   "rules": {
     "fsd-pathcheker/path-checker": ["error", { "alias": "@" }],
-    "fsd-pathcheker/public-api-imports": ["error", { "alias": "@" }]
+    "fsd-pathcheker/public-api-imports": [
+      "error",
+      {
+        "alias": "@",
+        "testFilesPatterns": ["**/*.test.*", "**/*.story.*"]
+      }
+    ]
   }
 }
 ```
 
-## Supported Rules
+## Rules
 
-- Fill in provided rules here
+| Name                 | Description                                                                      |
+| :------------------- | :------------------------------------------------------------------------------- |
+| [path-checker]       | Check if path should be relative according to Feature-sliced design methodology. |
+| [public-api-imports] | Checks if absolute path imports from public api                                  |
