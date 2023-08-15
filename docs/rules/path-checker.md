@@ -9,6 +9,7 @@ Check imports have relative path within single slice in project used Feature Sli
 `Import to:` C:\production-project\src\entities\Article\ui\ArticleList\ArticleList.tsx
 
 `Import from:` C:\production-project\src\entities\Article\model\types\article.ts
+
 `Import from:` C:\production-project\src\shared\ui\Text\Text.tsx
 
 Examples of **incorrect** code for this rule:
