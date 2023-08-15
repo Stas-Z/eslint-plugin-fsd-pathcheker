@@ -1,6 +1,6 @@
 # eslint-plugin-fsd-pathcheker
 
-plugin for production project
+Plugin for checking imports path in [FSD](https://feature-sliced.design/) project.
 
 ## Installation
 
@@ -31,21 +31,19 @@ Then configure the rules you want to use under the rules section.
 ```json
 {
   "rules": {
-    "fsd-pathcheker/path-checker": ["error", { "alias": "@" }],
-    "fsd-pathcheker/public-api-imports": [
-      "error",
-      {
-        "alias": "@",
-        "testFilesPatterns": ["**/*.test.*", "**/*.story.*"]
-      }
-    ]
+    "fsd-pathcheker/path-checker": "error",
+    "fsd-pathcheker/public-api-imports": "error",
+    "fsd-pathcheker/layer-imports": "error"
   }
 }
 ```
 
 ## Rules
 
-| Name                 | Description                                                                      |
-| :------------------- | :------------------------------------------------------------------------------- |
-| [path-checker]       | Check if path should be relative according to Feature-sliced design methodology. |
-| [public-api-imports] | Checks if absolute path imports from public api                                  |
+Check FSD imports is correct:
+
+| Name                                                   | Description                                                                        |
+| :----------------------------------------------------- | :--------------------------------------------------------------------------------- |
+| [path-checker](docs/rules/path-checker.md)             | Check if path should be relative according to Feature-sliced design methodology.   |
+| [layer-imports](docs/rules/layer-imports.md)           | Checking imports from upper layers according to Feature-sliced design methodology. |
+| [public-api-imports](docs/rules/public-api-imports.md) | Checks if absolute path imports from public api                                    |

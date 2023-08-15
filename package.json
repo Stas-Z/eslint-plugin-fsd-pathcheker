@@ -1,6 +1,6 @@
 {
   "name": "eslint-plugin-fsd-pathcheker",
-  "version": "0.0.10",
+  "version": "0.1.0",
   "description": "plugin for production project",
   "keywords": [
     "eslint",
