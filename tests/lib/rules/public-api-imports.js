@@ -68,6 +68,7 @@ ruleTester.run('public-api-imports', rule, {
         },
       ],
       options: aliasOptions,
+      output: "import { commentFormActions } from '@/entities/Article'",
     },
     {
       filename:
@@ -75,14 +76,12 @@ ruleTester.run('public-api-imports', rule, {
       code: "import { addCommentFormActions, addCommentFormReducer } from '@/entities/Article/testing/file.tsx'",
       errors: [
         {
-          message:
-            'Absolute imports are allowed only from Public API (index.ts).',
-        },
-        {
           message: 'Test data must be imported from Public API (testing.ts).',
         },
       ],
       options: testPatternOptions,
+      output:
+        "import { addCommentFormActions, addCommentFormReducer } from '@/entities/Article/testing'",
     },
     {
       filename:
@@ -90,14 +89,12 @@ ruleTester.run('public-api-imports', rule, {
       code: "import { addCommentFormActions, addCommentFormReducer } from '@/features/ArticleComments/model/slices/articleCommentsSlice'",
       errors: [
         {
-          message:
-            'Absolute imports are allowed only from Public API (index.ts).',
-        },
-        {
           message: 'Test data must be imported from Public API (testing.ts).',
         },
       ],
       options: testPatternOptions,
+      output:
+        "import { addCommentFormActions, addCommentFormReducer } from '@/features/ArticleComments/testing'",
     },
     {
       filename:
@@ -110,6 +107,8 @@ ruleTester.run('public-api-imports', rule, {
         },
       ],
       options: testPatternOptions,
+      output:
+        "import { addCommentFormActions, addCommentFormReducer } from '@/entities/Article/testing'",
     },
   ],
 });

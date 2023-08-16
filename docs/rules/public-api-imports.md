@@ -4,7 +4,7 @@ Checks if absolute imports are from Public API (index.ts)
 
 ## Rule Details
 
-This rule reports on absolute imports not from Public API for entities, features, pages, widgets layers. You should re-export data from index.ts file or from testing.ts for test data.
+This rule reports on absolute imports not from Public API for entities, features, pages, widgets layers. You should re-export data from index.ts file or from testing.ts for test data. Auto-fix available.
 
 ## Rule Options
 
