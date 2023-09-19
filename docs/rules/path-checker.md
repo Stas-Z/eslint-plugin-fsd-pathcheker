@@ -1,6 +1,6 @@
 # Check if path should be relative according to Feature-sliced design methodology. (path-checker)
 
-Check imports have relative path within single slice in project used Feature Slice Design (FSD).
+Check imports have relative path within single slice in project used Feature Slice Design (FSD). Auto-fix available.
 
 ## Rule Details
 
