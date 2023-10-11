@@ -22,7 +22,7 @@ ruleTester.run('path-checker', rule, {
   valid: [
     {
       filename:
-        'C:\\Users\\stani\\Desktop\\myApp\\production-project\\src\\entities\\Article',
+        'C:\\Users\\username\\Desktop\\myApp\\production-project\\src\\entities\\Article',
       code: "import { commentFormActions } from '../../model/slice/commentFormSlice'",
       errors: [],
     },
@@ -31,7 +31,7 @@ ruleTester.run('path-checker', rule, {
   invalid: [
     {
       filename:
-        'C:\\Users\\stani\\Desktop\\myApp\\production-project\\src\\entities\\Article',
+        'C:\\Users\\username\\Desktop\\myApp\\production-project\\src\\entities\\Article',
       code: "import { commentFormActions } from '@/entities/Article/model/slice/commentFormSlice'",
       errors: [
         { message: 'Within a single slice, all paths must be relative.' },
@@ -44,7 +44,7 @@ ruleTester.run('path-checker', rule, {
     },
     {
       filename:
-        'C:\\Users\\stani\\Desktop\\myApp\\production-project\\src\\entities\\Article',
+        'C:\\Users\\username\\Desktop\\myApp\\production-project\\src\\entities\\Article',
       code: "import { commentFormActions } from 'entities/Article/model/slice/commentFormSlice'",
       errors: [
         { message: 'Within a single slice, all paths must be relative.' },
